@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ebuyco/CapsulVentures.git"
+    "url": "git+https://github.com/ebuyco/CoronaAPIscrape.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ebuyco/CapsulVentures/issues"
+    "url": "https://github.com/ebuyco/CoronaAPIscrape/issues"
   },
-  "homepage": "https://github.com/ebuyco/CapsulVentures#readme",
+  "homepage": "https://github.com/ebuyco/CoronaAPIscrape#readme",
   "dependencies": {
     "next": "^9.3.0",
     "parcel-bundler": "^1.12.4",
