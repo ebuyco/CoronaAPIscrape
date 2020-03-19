@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 
-const useStats = url => {
+export default function useStats(url) {
   const [stats, setStats] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   useEffect(() => {
-    console.log('Mounting or logging');
     async function fetchData() {
       setLoading(true);
+
       try {
         const res = await fetch(url);
         const data = await res.json();
@@ -31,6 +31,4 @@ const useStats = url => {
     loading,
     error,
   };
-};
-
-export default useStats;
+}
