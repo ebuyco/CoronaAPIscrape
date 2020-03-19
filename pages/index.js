@@ -6,9 +6,9 @@ export default function IndexPage() {
   return (
     <>
       <div>
+        <h1>Totals: </h1>
         <Stats url="https://covid19.mathdro.id/api/" />
         <CountrySelector />
-        {/* <Stats url="https://covid19.mathdro.id/api/countries/PH" /> */}
       </div>
     </>
   );
