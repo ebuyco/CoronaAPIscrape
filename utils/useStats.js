@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function useStats(url) {
+const useStats = url => {
   const [stats, setStats] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -14,7 +14,6 @@ export default function useStats(url) {
         if (res.status === 404 && data.error) {
           setError(data.error.message);
         } else {
-          // reset error
           setError('');
         }
         setStats(data);
@@ -31,4 +30,6 @@ export default function useStats(url) {
     loading,
     error,
   };
-}
+};
+
+export default useStats;
