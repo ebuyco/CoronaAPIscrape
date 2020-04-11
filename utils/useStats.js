@@ -19,7 +19,7 @@ const useStats = url => {
         setStats(data);
         setLoading(false);
       } catch (err) {
-        console.log(`Fetch error: ${err}`);
+        // console.log(`Fetch error: ${err}`);
         setError(err);
       }
     }
