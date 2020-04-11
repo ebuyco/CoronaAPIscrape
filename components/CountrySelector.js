@@ -13,16 +13,17 @@ export default function CountrySelector() {
 
   return (
     <div>
-      <h2>Currently Showing: {selectedCountry}</h2>
+      <h2>Currently Showing {selectedCountry}</h2>
       <select
-        onChange={e => setSelectedCountry(countries.countries[e.target.value])}
-        defaultValue={selectedCountry}
+        onChange={e => {
+          setSelectedCountry(e.target.value);
+        }}
       >
         {Object.entries(countries.countries).map(([country, code]) => (
           <option
-            // selected={selectedCountry === countries.iso3[code]}
+            selected={selectedCountry === countries.iso3[code]}
             key={code}
-            value={country}
+            value={countries.iso3[code]}
           >
             {country}
           </option>

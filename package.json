@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ebuyco/CoronaAPIscrape#readme",
   "dependencies": {
     "next": "^9.3.0",
+    "normalize.css": "^8.0.1",
     "parcel-bundler": "^1.12.4",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
