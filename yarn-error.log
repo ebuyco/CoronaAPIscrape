@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/ernie/.nvm/versions/node/v12.9.1/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js add normalize.css
+  /Users/ernie/.nvm/versions/node/v12.9.1/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js add @material-ui/core axios chart.js react-chartjs-2 react-countup
 
 PATH: 
   /usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql@5.7/bin:/usr/local/opt/mysql@5.7/bin:/Users/ernie/.nvm/versions/node/v12.9.1/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/libiconv/bin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/sbin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/opt/gettext/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/opt/gettext/bin:/usr/local/opt/curl-openssl/bin:/usr/local/opt/openldap/sbin:/usr/local/opt/openldap/bin:/usr/local/opt/openldap/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,8 +14,16 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: read ECONNRESET
-      at TLSWrap.onStreamRead (internal/stream_base_commons.js:183:27)
+  Error: https://registry.yarnpkg.com/@material-ui%2fcore: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141292:19)
+      at Object.onceWrapper (events.js:297:20)
+      at ClientRequest.emit (events.js:209:13)
+      at TLSSocket.emitRequestTimeout (_http_client.js:687:40)
+      at Object.onceWrapper (events.js:297:20)
+      at TLSSocket.emit (events.js:209:13)
+      at TLSSocket.Socket._onTimeout (net.js:434:8)
+      at listOnTimeout (internal/timers.js:531:17)
+      at processTimers (internal/timers.js:475:7)
 
 npm manifest: 
   {
@@ -39,6 +47,7 @@ npm manifest:
     "homepage": "https://github.com/ebuyco/CoronaAPIscrape#readme",
     "dependencies": {
       "next": "^9.3.0",
+      "normalize.css": "^8.0.1",
       "parcel-bundler": "^1.12.4",
       "react": "^16.13.0",
       "react-dom": "^16.13.0",
@@ -8623,6 +8632,11 @@ Lockfile:
     version "3.3.0"
     resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
     integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
+  
+  normalize.css@^8.0.1:
+    version "8.0.1"
+    resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+    integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
   
   npm-run-path@^2.0.0:
     version "2.0.2"
