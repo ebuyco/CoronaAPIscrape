@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     borderBottom: '10px solid rgba(255,0,0,0.5)',
   },
 });
-
+/*eslint-disable*/
 const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
     return 'Loading...';

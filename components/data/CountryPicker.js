@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { NativeSelect, FormControl } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { fetchCountries } from '../api';
+
 const useStyles = makeStyles({
   container: {
     width: '30%',
