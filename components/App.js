@@ -23,7 +23,6 @@ class Page extends React.Component {
 
   handleCountryChange = async country => {
     const data = await fetchData(country);
-
     this.setState({ data, country });
   };
 
