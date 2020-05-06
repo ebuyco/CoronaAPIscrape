@@ -1,42 +1,18 @@
 import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import CountUp from 'react-countup';
+import cx from 'classnames';
+import styles from '../css/Cards.module.css';
 
-const useStyles = makeStyles({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    margin: '50px 0',
-  },
-
-  card: {
-    margin: ' 0 2% !important',
-  },
-
-  infected: {
-    borderBottom: '10px solid rgba(0,0,255,0.5)',
-  },
-
-  recovered: {
-    borderBottom: '10px solid rgba(0,255,0,0.5)',
-  },
-
-  deaths: {
-    borderBottom: '10px solid rgba(255,0,0,0.5)',
-  },
-});
 /*eslint-disable*/
 const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
     return 'Loading...';
   }
 
-  const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <div className={styles.container}>
       <Grid container spacing={3} justify="center">
         <Grid container spacing={3} justify="center">
           <Grid
@@ -44,7 +20,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             xs={12}
             md={3}
             component={Card}
-            className={(classes.card, classes.infected)}
+            className={cx(styles.card, styles.infected)}
           >
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -71,7 +47,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             xs={12}
             md={3}
             component={Card}
-            className={(classes.card, classes.recovered)}
+            className={cx(styles.card, styles.recovered)}
           >
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -98,7 +74,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             xs={12}
             md={3}
             component={Card}
-            className={(classes.card, classes.deaths)}
+            className={cx(styles.card, styles.deaths)}
           >
             <CardContent>
               <Typography color="textSecondary" gutterBottom>

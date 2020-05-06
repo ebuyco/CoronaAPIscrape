@@ -1,23 +1,10 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
 import { Cards, CountryPicker, Chart } from './data';
 import { fetchData } from './api';
+import styles from './css/App.module.css';
 
-// import Image from '../public/static/image.png';
-
-const useStyles = makeStyles({
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-  },
-
-  image: {
-    width: '370px',
-    marginTop: '50px',
-  },
-});
+import Image from '../public/static/image.png';
 
 class Page extends React.Component {
   /*eslint-disable*/
@@ -42,10 +29,10 @@ class Page extends React.Component {
 
   render() {
     const { data, country } = this.state;
-    const classes = useStyles();
+
     return (
-      <div className={classes.container}>
-        {/* <img className={classes.image} src={Image} alt="COVID-19" /> */}
+      <div className={styles.container}>
+        <img className={styles.image} src={Image} alt="COVID-19" />
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Chart data={data} country={country} />
