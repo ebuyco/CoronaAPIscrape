@@ -14,7 +14,9 @@ body {
       margin-top: 50px;
 }
 
-
+select.MuiNativeSelect-root.MuiNativeSelect-select.MuiInputBase-input.MuiInput-input {
+    min-width: 800px !important;
+}
 @media only screen and (max-width: 770px){
       .container{
             margin: 0 10%;
